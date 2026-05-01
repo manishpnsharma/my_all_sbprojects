@@ -3,8 +3,11 @@ server:
 spring:
   application:
     name: spring_cloude_config_server
+  profiles:
+    active: dev
   cloud:
     config:
       server:
         git:
-          uri: https://github.com/manishpnsharma/Education_backend.git
+          uri: https://github.com/manishpnsharma/my_all_sbprojects/tree/my_all_sbprojects/config-repo
+

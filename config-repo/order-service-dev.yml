@@ -1,2 +1,4 @@
+server:
+  port: 9091
 order:
   message: "DEV profile using Spring Cloud Config"
