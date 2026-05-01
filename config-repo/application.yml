@@ -1,0 +1,4 @@
+common:
+  timeout-ms: 5000
+  app: 
+   common-message: "Common msg from config server"

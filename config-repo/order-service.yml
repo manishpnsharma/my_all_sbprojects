@@ -1,0 +1,12 @@
+server:
+  port: 8081
+
+#order:
+ # message: Hello from Spring Cloud Config Server
+  #payment-url: http://localhost:9090/api/payments
+  #support-email: support@example.com
+  
+app: 
+  message: "Hello from order-service default Config"
+  feature:
+   discount-enabled: false
