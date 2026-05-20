@@ -10,4 +10,10 @@ spring:
       server:
         git:
           uri: https://github.com/manishpnsharma/my_all_sbprojects/tree/my_all_sbprojects/config-repo
-
+          force-pull: true # pull the latest code from GIT in case the local repo has some issues and couldn't able to update the repo
+          skipSslValidation: true # Git Server SSL validation can be disabled
+          timeout: 10 #HTTP connection timeout (in seconds)
+          username: manish.pnsharma@gmail.com
+          password: wI$2025Z
+#encrypt:
+  #key: <your security key go over here>

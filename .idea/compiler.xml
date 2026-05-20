@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="CoreJava" />
         <module name="child" />
         <module name="spring_cloude_config_server" />
       </profile>
@@ -17,6 +18,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="CoreJava" options="-parameters" />
       <module name="child" options="-parameters" />
       <module name="parent" options="-parameters" />
       <module name="spring_cloude_config" options="-parameters" />

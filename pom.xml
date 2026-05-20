@@ -19,6 +19,7 @@
     <modules>
         <module>child</module>
          <module>spring_cloude_config_server</module>
+        <module>child/CoreJava</module>
     </modules>
 
     <properties>
