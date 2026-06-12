@@ -21,6 +21,7 @@
          <module>spring_cloude_config_server</module>
         <module>child/CoreJava</module>
         <module>Spring-AI</module>
+        <module>Cacheable</module>
     </modules>
 
     <properties>

@@ -9,6 +9,7 @@
         <module name="spring_cloude_config_server" />
         <module name="CoreJava" />
         <module name="Spring-AI" />
+        <module name="Cacheable" />
         <module name="child" />
       </profile>
     </annotationProcessing>
@@ -19,6 +20,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Cacheable" options="-parameters" />
       <module name="CoreJava" options="-parameters" />
       <module name="Spring-AI" options="-parameters" />
       <module name="child" options="-parameters" />
