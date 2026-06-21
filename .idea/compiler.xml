@@ -6,14 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="Java8_All_in_one" />
         <module name="spring_cloude_config_server" />
+        <module name="jwt-authservice" />
+        <module name="Cacheable" />
+        <module name="Spring_Multipart_File" />
         <module name="CoreJava" />
         <module name="Spring-AI" />
-        <module name="Cacheable" />
+        <module name="jwt-orderservice" />
         <module name="child" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="jwt_orderservice" target="21" />
       <module name="parent" target="21" />
       <module name="spring_cloude_config" target="21" />
     </bytecodeTargetLevel>
@@ -22,8 +27,13 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Cacheable" options="-parameters" />
       <module name="CoreJava" options="-parameters" />
+      <module name="Java8_All_in_one" options="-parameters" />
       <module name="Spring-AI" options="-parameters" />
+      <module name="Spring_Multipart_File" options="-parameters" />
       <module name="child" options="-parameters" />
+      <module name="jwt-authservice" options="-parameters" />
+      <module name="jwt-orderservice" options="-parameters" />
+      <module name="jwt_orderservice" options="-parameters" />
       <module name="parent" options="-parameters" />
       <module name="spring_cloude_config" options="-parameters" />
       <module name="spring_cloude_config_server" options="-parameters" />

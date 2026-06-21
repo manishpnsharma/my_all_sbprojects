@@ -1,0 +1,10 @@
+PS C:\Users\manis> docker model list
+MODEL NAME           PARAMETERS  QUANTIZATION    ARCHITECTURE  MODEL ID      CREATED        CONTEXT  SIZE        
+llama3.2:1B-Q8_0     1.24 B      Q8_0            llama         a15c3117eeeb  15 months ago           1.22 GiB
+smollm2:360M-Q4_K_M  361.82 M    IQ2_XXS/Q4_K_M  llama         354bf30d0aa3  15 months ago           256.35 MiB
+PS C:\Users\manis>
+
+
+http://localhost:12434/engines/v1/chat/completions
+
+docker model run ai/smollm2:360M-Q4_K_M "Explain to me how AI works"

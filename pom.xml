@@ -22,6 +22,10 @@
         <module>child/CoreJava</module>
         <module>Spring-AI</module>
         <module>Cacheable</module>
+        <module>Spring_Multipart_File</module>
+        <module>Java8_All_in_one</module>
+        <module>jwt-authservice</module>
+        <module>jwt-orderservice</module>
     </modules>
 
     <properties>
