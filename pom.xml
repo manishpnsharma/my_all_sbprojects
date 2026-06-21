@@ -26,6 +26,7 @@
         <module>Java8_All_in_one</module>
         <module>jwt-authservice</module>
         <module>jwt-orderservice</module>
+        <module>doker_radis</module>
     </modules>
 
     <properties>

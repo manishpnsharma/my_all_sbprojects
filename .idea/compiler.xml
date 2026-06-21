@@ -11,6 +11,7 @@
         <module name="jwt-authservice" />
         <module name="Cacheable" />
         <module name="Spring_Multipart_File" />
+        <module name="doker_radis" />
         <module name="CoreJava" />
         <module name="Spring-AI" />
         <module name="jwt-orderservice" />
@@ -31,6 +32,7 @@
       <module name="Spring-AI" options="-parameters" />
       <module name="Spring_Multipart_File" options="-parameters" />
       <module name="child" options="-parameters" />
+      <module name="doker_radis" options="-parameters" />
       <module name="jwt-authservice" options="-parameters" />
       <module name="jwt-orderservice" options="-parameters" />
       <module name="jwt_orderservice" options="-parameters" />
