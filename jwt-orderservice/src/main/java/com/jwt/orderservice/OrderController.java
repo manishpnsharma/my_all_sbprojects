@@ -4,6 +4,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.oauth2.jwt.Jwt;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.Instant;
 import java.util.List;
 import java.util.Map;
 
@@ -30,6 +31,23 @@ public class OrderController {
                 "email", email,
                 "roles", roles,
                 "orders", List.of("Order-101", "Order-102", "Order-103")
+        );
+    }
+    @GetMapping("/token-info")
+    public Map<String, Object> tokenInfo(Authentication authentication) {
+
+        Jwt jwt = (Jwt) authentication.getPrincipal();
+
+        Instant expiryTime = jwt.getExpiresAt();
+        Instant currentTime = Instant.now();
+
+        boolean expired = expiryTime != null && expiryTime.isBefore(currentTime);
+
+        return Map.of(
+                "username", jwt.getSubject(),
+                "currentTime", currentTime,
+                "expiryTime", expiryTime,
+                "expired", expired
         );
     }
 }

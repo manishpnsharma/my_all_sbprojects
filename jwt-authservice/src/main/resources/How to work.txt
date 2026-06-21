@@ -3,6 +3,10 @@ Step 1: Generate public and private keys
     2. generate private key ( copy in src folder of below 1 project)
     3. generate public key  ( copy in src folder of below 1 project)
     4. generate public key  ( copy in src folder of below 2 project)
+    5. Example
+        a. mkdir keys
+        b. openssl genpkey -algorithm RSA -out private_key.pem -pkeyopt rsa_keygen_bits:2048
+        c. openssl rsa -pubout -in private_key.pem -out public_key.pem
 
 Step 2: Spring boot Create project Authservice
     1. Add dependencies
@@ -59,6 +63,7 @@ Step 5: Run the application
 
     open postman
     posts : http://localhost:8082/orders/my
+    request body
     header
     {
         "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
@@ -79,4 +84,17 @@ Step 5: Run the application
           ]
       }
 
-
+for check the user info in order service
+    Get url : http://localhost:8082/token-info
+    request body
+    pass token : header
+    {
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+    }
+    response body
+    {
+        "expiryTime": "2026-06-21T09:23:08Z",
+        "currentTime": "2026-06-21T08:53:25.950188800Z",
+        "username": "manish",
+        "expired": false
+    }
