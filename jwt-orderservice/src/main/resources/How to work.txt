@@ -1,0 +1,82 @@
+Step 1: Generate public and private keys
+    1. Download opessl exe file
+    2. generate private key ( copy in src folder of below 1 project)
+    3. generate public key  ( copy in src folder of below 1 project)
+    4. generate public key  ( copy in src folder of below 2 project)
+
+Step 2: Spring boot Create project Authservice
+    1. Add dependencies
+    2. Add security configuration
+    3. Add JWT configuration
+    4. Add controller
+    5. Add application.properties
+    6. Add public_key.pem
+    7. Add private_key.pem
+
+Step 3: Run the application
+    1. Run the application
+    2. Test the API using Postman or any other API testing tool
+    3. Use the generated JWT token to access the protected API endpoints
+    4. Verify the JWT token using the public key
+    5. If the token is valid, access the protected API endpoints
+    6. If the token is invalid, return an error response
+
+Step 4: Spring boot Create project Orderservice
+    1. Add dependencies
+    2. Add security configuration
+    3. Add JWT configuration
+    4. Add controller
+    5. Add application.properties
+    6. Add public_key.pem
+
+Step 5: Run the application
+    1. Run the application
+    2. Test the API using Postman or any other API testing tool
+    3. Use the generated JWT token from Authservice to access the protected API endpoints in Orderservice
+    4. Verify the JWT token using the public key in Orderservice
+    5. If the token is valid, access the protected API endpoints in Orderservice
+    6. If the token is invalid, return an error response from Orderservice
+
+ step 6: test both service together
+    1. Start both Authservice and Orderservice applications
+    2. Use Postman to first authenticate with Authservice and obtain a JWT token
+    3. Use the obtained JWT token to access protected endpoints in Orderservice
+    4. Verify that the token is accepted by Orderservice and that you can access the protected resources
+    5. Test with an invalid or expired token to ensure that Orderservice correctly rejects unauthorized access
+
+    Example :
+    open postman
+    pots : http://localhost:8085/auth/login
+    request body
+    {
+           "username": "manish",
+           "password": "password"
+      }
+    response body
+    {
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+    }
+
+    open postman
+    posts : http://localhost:8082/orders/my
+    header
+    {
+        "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+    }
+
+     response body
+      {
+          "message": "JWT is valid. Access allowed.",
+          "orders": [
+              "Order-101",
+              "Order-102",
+              "Order-103"
+          ],
+          "email": "manish@example.com",
+          "username": "manish",
+          "roles": [
+              "ROLE_USER"
+          ]
+      }
+
+
